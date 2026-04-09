@@ -1,0 +1,24 @@
+/* theme/static/css/style.css */
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/inter.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'SourceSerif4';
+    src: url('../fonts/sourceserif4.woff2') format('woff2');
+}
+
+body {
+    font-family: 'SourceSerif4', serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: -0.003rem;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.011rem;
+}

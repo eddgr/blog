@@ -1,17 +1,16 @@
-title: Home
-slug: home
-save_as: index.html
-hide_title: True
+title: Hello World
+slug: hello-world
+date: 2020-07-17
 
 ## Introduction
 
 Hi, my name is Edgar and I'm a software engineer.
 
-I wasn't always but in 2019, I signed up and completed a full stack development curriculim from Flatiron School. It was the best decision I ever made!
+I wasn't always but in 2019, I signed up and completed a full stack development curriculim from [Flatiron School](https://flatironschool.com/). It was the best decision I ever made!
 
 I was also very fortunate to be able to accept an offer, within a month of graduation, with a company I was really interested in.
 
-The reason I created this blog is because I want to resume the habits I developed at Flatiron School of writing a monthly blog. I kinda stopped after I graduated but you can check out my Medium for my past blogs.
+The reason I created this blog is because I want to resume the habits I developed at Flatiron School of writing a monthly blog. I kinda stopped after I graduated but you can [check out my Medium](https://medium.com/eddgr) for my past blogs.
 
 ## Why not continue on Medium?
 
