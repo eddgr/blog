@@ -15,10 +15,39 @@ body {
     font-size: 1.25rem;
     font-weight: 400;
     letter-spacing: -0.003rem;
+    margin: 0 auto;
+    max-width: 50rem;
+    width: 100%;
+    color: #111111;
 }
 
 h1, h2, h3, h4, h5 {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     letter-spacing: -0.011rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+hr {
+    background-color: #eeeeee;
+    height: 1px;
+    border: none;
+    margin: 1.25rem 0;
+}
+
+.container {
+    padding: 0 1rem;
+}
+
+.byline {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #999999;
+    display: flex;
+    margin: 0 0 1rem;
 }

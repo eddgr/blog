@@ -1,5 +1,6 @@
 title: Automate Python Workflow With Pre-Commits: Autopep8 and Pylint
 date: 2021-05-05
+modified: 2026-01-01
 
 Collaborating on a Python project? Keep the code base unified between contributers using pre-commit to streamline the workflow.
 
