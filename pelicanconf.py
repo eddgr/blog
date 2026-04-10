@@ -16,6 +16,12 @@ ARTICLE_SAVE_AS = "{slug}/index.html"
 PAGE_URL = "{slug}/"
 PAGE_SAVE_AS = "{slug}/index.html"
 
+# Disable Author/s pages
+AUTHOR_URL = ""
+AUTHOR_SAVE_AS = ""
+AUTHORS_URL = ""
+AUTHORS_SAVE_AS = ""
+
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None

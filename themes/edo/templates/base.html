@@ -70,9 +70,7 @@
                 <header>
                     {% block header %}
                         <hgroup>
-                            <h1>
-                                <a href="{{ SITEURL }}/">{{ SITENAME }}</a>
-                            </h1>
+                            <a href="{{ SITEURL }}/">{{ SITENAME }}</a>
                             {% if SITESUBTITLE %}<p>{{ SITESUBTITLE }}</p>{% endif %}
                         </hgroup>
                     {% endblock header %}
@@ -110,10 +108,7 @@
                 </main>
                 <footer>
                     {% block footer %}
-                        <address>
-                            Proudly powered by <a rel="nofollow" href="https://getpelican.com/">Pelican</a>,
-                            which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
-                        </address>
+                        <div>Hello from the bottom.</div>
                     {% endblock footer %}
                 </footer>
             {% endblock body %}
