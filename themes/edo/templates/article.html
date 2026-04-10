@@ -11,18 +11,18 @@
 {% block content %}
     <article>
         <header>
-            <h2>{{ article.title }}</h2>
+            <h1>{{ article.title }}</h1>
             {% import 'translations.html' as translations with context %}
             {{ translations.translations_for(article) }}
             <div class="byline">
                 <div>
                     {% if article.modified %}
-                        <strong>Last updated:</strong> <time datetime="{{ article.modified.strftime("%Y-%m-%d") }}">
-                            {{ article.modified.strftime("%Y-%m-%d") }}
-                        </time> | Originally Posted:
+                        <strong>Updated:</strong> <time datetime="{{ article.modified.strftime("%B %d, %Y") }}">
+                            {{ article.modified.strftime("%B %d, %Y") }}
+                        </time> | Posted:
                     {% endif %}
-                    <time datetime="{{ article.date.strftime("%Y-%m-%d") }}">
-                        {{ article.date.strftime("%Y-%m-%d") }}
+                    <time datetime="{{ article.date.strftime("%B %d, %Y") }}">
+                        {{ article.date.strftime("%B %d, %Y") }}
                     </time>
                 </div>
             </div>

@@ -19,12 +19,26 @@ body {
     max-width: 50rem;
     width: 100%;
     color: #111111;
+    line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3 {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     letter-spacing: -0.011rem;
+    line-height: 1.2;
+}
+
+/* Desktop Styles (Default) */
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+
+/* Small Screens (Mobile) */
+@media (max-width: 600px) {
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.3rem; }
 }
 
 a {
@@ -50,4 +64,34 @@ hr {
     color: #999999;
     display: flex;
     margin: 0 0 1rem;
+}
+
+/* The container */
+pre {
+  background-color: #f6f8fa;
+  border-radius: 6px;
+  padding: 16px;
+  overflow: auto; /* Enables horizontal scrolling for long lines */
+  line-height: 1.45;
+  border: 1px solid #d0d7de;
+}
+
+/* The text inside */
+code {
+  font-family: monospace;
+  font-size: 85%;
+  margin: 0;
+  padding: 0.2em 0.4em;
+  background-color: rgba(175, 184, 193, 0.2);
+  border-radius: 6px;
+}
+
+/* Prevents double-background when code is inside a pre block */
+pre code {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  color: #24292f;
+  word-break: normal;
+  white-space: pre; /* Keeps your formatting/indents intact */
 }
