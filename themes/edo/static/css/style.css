@@ -31,10 +31,14 @@ h1, h2, h3 {
 h1 { font-size: 2.5rem; }
 h2 { font-size: 2rem; }
 h3 { font-size: 1.75rem; }
+.logo {
+    height: 3.5rem;
+}
 @media (max-width: 600px) {
   h1 { font-size: 1.8rem; }
   h2 { font-size: 1.5rem; }
   h3 { font-size: 1.3rem; }
+  .logo { height: 2.5rem; }
 }
 /* Headers [end] */
 
@@ -48,19 +52,6 @@ hr {
     height: 1px;
     border: none;
     margin: 1.25rem 0;
-}
-
-.container {
-    padding: 0 1rem;
-}
-
-.byline {
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    color: #999999;
-    display: flex;
-    margin: 0 0 1rem;
 }
 
 /* Code Block */
@@ -89,3 +80,32 @@ pre code {
   white-space: pre;
 }
 /* Code Block [end] */
+
+header {
+    margin-top: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 0;
+}
+
+footer {
+    margin: 2.5rem 0 1.25rem;
+    font-size: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container {
+    padding: 0 1rem;
+}
+
+.byline {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #999999;
+    display: flex;
+    margin: 0 0 1rem;
+}

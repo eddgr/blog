@@ -8,28 +8,36 @@
     {% if article.description %}<meta name="description" content="{{ article.description }}" />{% endif %}
     {% for tag in article.tags %}<meta name="tags" content="{{ tag }}" />{% endfor %}
 {% endblock %}
+{% block header %}{% endblock %}
 {% block content %}
     <article>
-        <header>
-            <h1>{{ article.title }}</h1>
-            {% import 'translations.html' as translations with context %}
-            {{ translations.translations_for(article) }}
-            <div class="byline">
-                <div>
-                    {% if article.modified %}
-                        <strong>Updated:</strong> <time datetime="{{ article.modified.strftime("%B %d, %Y") }}">
-                            {{ article.modified.strftime("%B %d, %Y") }}
-                        </time> | Posted:
-                    {% endif %}
-                    <time datetime="{{ article.date.strftime("%B %d, %Y") }}">
-                        {{ article.date.strftime("%B %d, %Y") }}
-                    </time>
-                </div>
+        <h1>{{ article.title }}</h1>
+        {% import 'translations.html' as translations with context %}
+        {{ translations.translations_for(article) }}
+        <div class="byline">
+            <div>
+                {% if article.modified %}
+                    <strong>Updated:</strong> <time datetime="{{ article.modified.strftime("%B %d, %Y") }}">
+                        {{ article.modified.strftime("%B %d, %Y") }}
+                    </time> | Posted:
+                {% endif %}
+                <time datetime="{{ article.date.strftime("%B %d, %Y") }}">
+                    {{ article.date.strftime("%B %d, %Y") }}
+                </time>
             </div>
-        </header>
+        </div>
         <hr />
         {{ article.content }}
-        <footer>
-        </footer>
     </article>
+{% endblock %}
+{% block footer %}
+    <footer>
+        <div>
+            <a href="{{ SITEURL }}/">
+                <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/logo.svg"
+                     alt="{{ SITENAME }}"
+                     class="logo">
+            </a>
+        </div>
+    </footer>
 {% endblock %}

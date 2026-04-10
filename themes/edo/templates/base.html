@@ -67,50 +67,24 @@
     <body>
         <div class="container">
             {% block body %}
-                <header>
-                    {% block header %}
-                        <hgroup>
-                            <a href="{{ SITEURL }}/">{{ SITENAME }}</a>
-                            {% if SITESUBTITLE %}<p>{{ SITESUBTITLE }}</p>{% endif %}
-                        </hgroup>
-                    {% endblock header %}
-                    {% block nav %}
-                        <nav>
-                            <ul>
-                                {% for title, link in MENUITEMS %}
-                                    <li>
-                                        <a href="{{ link }}">{{ title }}</a>
-                                    </li>
-                                {% endfor %}
-                                {% if DISPLAY_PAGES_ON_MENU %}
-                                    {% for p in pages %}
-                                        <li>
-                                            <a href="{{ SITEURL }}/{{ p.url }}"
-                                               {% if p==page %}aria-current="page"{% endif %}>{{ p.title }}</a>
-                                        </li>
-                                    {% endfor %}
-                                {% endif %}
-                                {% if DISPLAY_CATEGORIES_ON_MENU %}
-                                    {% for cat, null in categories %}
-                                        <li>
-                                            <a href="{{ SITEURL }}/{{ cat.url }}"
-                                               {% if cat==category %}aria-current="page"{% endif %}>{{ cat }}</a>
-                                        </li>
-                                    {% endfor %}
-                                {% endif %}
-                            </ul>
-                        </nav>
-                    {% endblock nav %}
-                </header>
+                {% block header %}
+                    <header>
+                        <div>
+                            <a href="{{ SITEURL }}/">
+                                <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/logo.svg"
+                                     alt="{{ SITENAME }}"
+                                     class="logo">
+                            </a>
+                        </div>
+                        {% if SITESUBTITLE %}<p>{{ SITESUBTITLE }}</p>{% endif %}
+                    </header>
+                {% endblock header %}
                 <main>
                     {% block content %}
                     {% endblock content %}
                 </main>
-                <footer>
-                    {% block footer %}
-                        <div>Hello from the bottom.</div>
-                    {% endblock footer %}
-                </footer>
+                {% block footer %}
+                {% endblock footer %}
             {% endblock body %}
         </div>
     </body>
