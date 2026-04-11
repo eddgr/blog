@@ -31,13 +31,13 @@ h1, h2, h3 {
 h1 { font-size: 2.5rem; }
 h2 { font-size: 2rem; }
 h3 { font-size: 1.75rem; }
-.logo {
-    height: 3.5rem;
-}
+.intro { margin: 2.5rem 0; }
+.logo { height: 3.5rem; }
 @media (max-width: 600px) {
   h1 { font-size: 1.8rem; }
   h2 { font-size: 1.5rem; }
   h3 { font-size: 1.3rem; }
+  .intro { margin: 0; }
   .logo { height: 2.5rem; }
 }
 /* Headers [end] */
@@ -81,22 +81,6 @@ pre code {
 }
 /* Code Block [end] */
 
-header {
-    margin-top: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    line-height: 0;
-}
-
-footer {
-    margin: 2.5rem 0 1.25rem;
-    font-size: 0.25rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .container {
     padding: 0 1rem;
 }
@@ -108,4 +92,8 @@ footer {
     color: #999999;
     display: flex;
     margin: 0 0 1rem;
+}
+
+.my-norm {
+    margin: 1.25rem 0;
 }

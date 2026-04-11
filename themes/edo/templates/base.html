@@ -67,18 +67,6 @@
     <body>
         <div class="container">
             {% block body %}
-                {% block header %}
-                    <header>
-                        <div>
-                            <a href="{{ SITEURL }}/">
-                                <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/logo.svg"
-                                     alt="{{ SITENAME }}"
-                                     class="logo">
-                            </a>
-                        </div>
-                        {% if SITESUBTITLE %}<p>{{ SITESUBTITLE }}</p>{% endif %}
-                    </header>
-                {% endblock header %}
                 <main>
                     {% block content %}
                     {% endblock content %}

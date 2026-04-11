@@ -1,5 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
+    <div class="intro">
+        <p>Hi, my name is Edgar and this is where I share some of my thoughts.</p>
+        <p>Most of what I share here is about software development but that won't always be the case.</p>
+        <p>Topics may expand into other things I enjoy, such as: Animal Flow, Slay the Spire, and learning Japanese.</p>
+        <p>But for now, you can check out what I've written below.</p>
+        <p>
+            Oh, and if you're looking for a way to contact me, you can reach me at: <em>hey [at] edgar.nyc</em>
+        </p>
+        <p>Cheers!</p>
+        <div>
+            <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/logo.svg"
+                 alt="Edgar"
+                 aria-label="Edgar"
+                 class="logo">
+        </div>
+        <hr />
+    </div>
     {% for year, group in articles_page.object_list|groupby('date.year')|reverse %}
         <h3>{{ year }}</h3>
         <ul>
