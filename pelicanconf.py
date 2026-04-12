@@ -35,3 +35,8 @@ MONTH_ARCHIVE_SAVE_AS = ""
 DAY_ARCHIVE_SAVE_AS = ""
 
 THEME = "themes/edo"
+
+STATIC_PATHS = ["extra/robots.txt"]
+EXTRA_PATH_METADATA = {
+    "extra/robots.txt": {"path": "robots.txt"},
+}
