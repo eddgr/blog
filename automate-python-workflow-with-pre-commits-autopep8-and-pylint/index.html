@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+                <title>
+Automate Python Workflow With Pre-Commits: Autopep8 and Pylint            </title>
+            <meta charset="utf-8" />
+            <meta name="generator" content="Pelican" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet"
+                  type="text/css"
+                  href="/theme/css/style.css" />
+
+    </head>
+    <body>
+        <div class="container">
+                <main>
+    <article>
+        <h1>Automate Python Workflow With Pre-Commits: Autopep8 and Pylint</h1>
+        
+        <div class="byline">
+            <div>
+                <time datetime="May 05, 2021">
+                    May 05, 2021
+                </time>
+            </div>
+        </div>
+        <hr />
+        <p>Collaborating on a Python project? Keep the code base unified between contributers using pre-commit to streamline the workflow.</p>
+<h2>What is pre-commit?</h2>
+<p>Pre-commit is a Git hook that triggers when <code>git commit</code> is attempted.</p>
+<p>For Python projects, I use it to spend less time formatting my code and more time working on features and higher priority tasks.</p>
+<h2>Get started</h2>
+<ul>
+<li><code>pip install pre-commit</code></li>
+<li>add config file (<code>.pre-commit-config.yaml</code>), here's an example:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">repos</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/PyCQA/pylint</span>
+<span class="w">      </span><span class="nt">rev</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pylint-2.7.2</span><span class="w">  </span><span class="c1"># Use the sha / tag you want to point at</span>
+<span class="w">      </span><span class="nt">hooks</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pylint</span>
+<span class="w">        </span><span class="nt">exclude</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">^server/</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/pre-commit/mirrors-autopep8</span>
+<span class="w">      </span><span class="nt">rev</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.5.4</span><span class="w">  </span><span class="c1"># Use the sha / tag you want to point at</span>
+<span class="w">      </span><span class="nt">hooks</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">autopep8</span>
+<span class="w">        </span><span class="nt">exclude</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">^server/</span>
+</code></pre></div>
+
+<ul>
+<li>Run <code>pre-commit install</code></li>
+<li>Run <code>pre-commit run --all-files</code> the first time pre-commit is added to the project so all files are checked</li>
+</ul>
+<p>Moving forward, pre-commit is triggered when <code>git commit</code> is attempted.</p>
+<h2>Usage</h2>
+<p>Commits are not saved until they pass the pre-commit.</p>
+<p>Based on the example configuration, all files must pass <code>pylint</code> then the same files are formatted to PEP 8 standard using <code>autopep8</code>.</p>
+<p>Errors will provide details about the files and why the process failed. Fix the issues and commit again until they pass.</p>
+<p>Pre-commit prevents pushing to the code base until they pass. Can you see the value in this? :)</p>
+    </article>
+                </main>
+    <div>
+        <a href="/">
+            <img src="/theme/logo.svg"
+                 alt="Edgar"
+                 aria-label="Edgar"
+                 class="logo my-norm">
+        </a>
+    </div>
+        </div>
+    </body>
+</html>
