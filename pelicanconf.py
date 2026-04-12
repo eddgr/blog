@@ -16,20 +16,22 @@ ARTICLE_SAVE_AS = "{slug}/index.html"
 PAGE_URL = "{slug}/"
 PAGE_SAVE_AS = "{slug}/index.html"
 
-# Disable Author/s pages
-AUTHOR_URL = ""
+# Disable generation of author pages
 AUTHOR_SAVE_AS = ""
-AUTHORS_URL = ""
 AUTHORS_SAVE_AS = ""
 
-# Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
-CATEGORY_FEED_ATOM = None
-TRANSLATION_FEED_ATOM = None
-AUTHOR_FEED_ATOM = None
-AUTHOR_FEED_RSS = None
+# Disable generation of category pages
+CATEGORY_SAVE_AS = ""
+CATEGORIES_SAVE_AS = ""
 
-# Uncomment following line if you want document-relative URLs when developing
-# RELATIVE_URLS = True
+# Disable generation of tag pages
+TAG_SAVE_AS = ""
+TAGS_SAVE_AS = ""
+
+# Disable archives (optional, but often desired if you're cleaning up)
+ARCHIVES_SAVE_AS = ""
+YEAR_ARCHIVE_SAVE_AS = ""
+MONTH_ARCHIVE_SAVE_AS = ""
+DAY_ARCHIVE_SAVE_AS = ""
 
 THEME = "themes/edo"
