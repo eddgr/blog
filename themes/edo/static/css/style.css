@@ -47,6 +47,10 @@ a {
     color: inherit;
 }
 
+article a {
+    border-bottom: 1px solid #111111;
+}
+
 hr {
     background-color: #eeeeee;
     height: 1px;
