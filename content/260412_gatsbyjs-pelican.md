@@ -8,7 +8,7 @@ My goal is to keep the design minimal and to reduce the friction in writing new 
 
 Previously, I primarily used this site to showcase my earlier projects during my time at Flatiron School and was a way to show my frontend abilities.
 
-However, I have not done frontend work in many years and now primarily focus on the backend. I also mostly my code in Python and SQL. So it didn't make sense to showcase projects that no longer reflect my current skills.
+However, I have not done frontend work in many years and now primarily focus on the backend. I also mostly code in Python and SQL. So it didn't make sense to showcase projects that no longer reflect my current skills.
 
 This leads into why I moved away from GatsbyJS, which was what I used previously. You can take a look at the [previous version of the site here](https://pensive-albattani-4c8772.netlify.app/).
 
